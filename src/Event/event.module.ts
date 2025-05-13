@@ -4,8 +4,7 @@ import { EventService } from "./event.service";
 import { MongooseModule } from "@nestjs/mongoose";
 import { Event, EventSchema } from "./event.schema";
 import { JwtModule } from "@nestjs/jwt";
-import { UserModule } from "src/user/user.module";
-import { CloudinaryModule } from "src/cloudinary/cloudinary.module";
+import { CloudinaryModule } from "../cloudinary/cloudinary.module";
 
 @Module({
     imports: [MongooseModule.forFeature([{ name: Event.name, schema: EventSchema }]), JwtModule, CloudinaryModule],

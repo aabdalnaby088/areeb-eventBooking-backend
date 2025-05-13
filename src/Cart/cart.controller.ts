@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Req, UseGuards } from "@nestjs/common";
 import { CartService } from "./cart.service";
-import { AuthGuard } from "src/guards/auth.guards";
+import { AuthGuard } from "../guards/auth.guards";
 import { UpdateQuantityDto } from "./dtos/update-quantity.dto";
 
 
