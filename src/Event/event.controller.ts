@@ -1,10 +1,10 @@
 import { BadRequestException, Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, UploadedFile, UseGuards, UseInterceptors } from "@nestjs/common";
 import { EventService } from "./event.service";
 import { CreateEventDto } from "./dtos/create-event.dto";
-import { AuthGuard } from "src/guards/auth.guards";
-import { AuthRoleGuard } from "src/guards/auth-role.guard";
-import { Roles } from "src/decorators/user-role.decorator";
-import { UserRole } from "src/utils/constants";
+import { AuthGuard } from "../guards/auth.guards";
+import { AuthRoleGuard } from "..//guards/auth-role.guard";
+import { Roles } from "../decorators/user-role.decorator";
+import { UserRole } from "..//utils/constants";
 import { editEventDto } from "./dtos/edit-event.dto";
 import { FileInterceptor } from "@nestjs/platform-express";
 import * as multer from "multer";

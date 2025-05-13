@@ -1,7 +1,6 @@
-// src/event/event.schema.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-import { EventCategory } from 'src/utils/constants';
+import { EventCategory } from '../utils/constants';
 
 export type UserDocument = HydratedDocument<Event>;
 

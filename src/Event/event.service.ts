@@ -4,7 +4,7 @@ import { Model } from "mongoose";
 import { BadRequestException, ConflictException, Injectable, NotFoundException } from "@nestjs/common";
 import { CreateEventDto } from "./dtos/create-event.dto";
 import { editEventDto } from "./dtos/edit-event.dto";
-import { CloudinaryService } from "src/cloudinary/cloudinay.service";
+import { CloudinaryService } from "..//cloudinary/cloudinay.service";
 
 
 @Injectable()

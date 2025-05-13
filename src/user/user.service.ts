@@ -5,7 +5,7 @@ import { Model } from "mongoose";
 import { Sign } from "crypto";
 import { SignupDto } from "./dtos/signup.dto";
 import { JwtService } from "@nestjs/jwt";
-import { ResponseInterceptor } from "src/interceptors/response.interceptor";
+import { ResponseInterceptor } from "../interceptors/response.interceptor";
 import { signinDto } from "./dtos/signin.dto";
 import * as bcrypt from 'bcrypt';
 
