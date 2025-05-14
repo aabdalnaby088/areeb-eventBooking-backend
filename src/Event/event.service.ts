@@ -99,5 +99,4 @@ export class EventService {
         await this.eventModel.findByIdAndDelete(id);
         return 'Event deleted successfully';
     }
-
-}
+  }

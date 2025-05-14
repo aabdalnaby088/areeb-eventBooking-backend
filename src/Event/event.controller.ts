@@ -61,10 +61,10 @@ async createEvent(
         return await this.eventService.listEvent();
     }
 
-    @Get('list/:category/:page')
-    async listEventByCategory(@Param('category') category: String, page: number = 1) {
+    @Get('list/:category')
+    async listEventByCategory(@Param('category') category: String) {
       
-        return await this.eventService.getEventsByCategory(category, page);
+        return await this.eventService.getEventsByCategory(category);
     }
 
     @Get('details/:id')
