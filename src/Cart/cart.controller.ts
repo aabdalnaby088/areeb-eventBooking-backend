@@ -41,4 +41,11 @@ export class CartController {
     const userId = req['user'].id;
     return await this.cartService.removeItemFromCart(userId, eventId);
     }
+
+    @Delete()
+    @UseGuards(AuthGuard)
+    async deleteCart(@Req() req: Request) {
+        const userId = req['user'].id;
+        return await this.cartService.deleteCart(userId);
+    }
 }

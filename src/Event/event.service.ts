@@ -82,6 +82,12 @@ export class EventService {
         return event;
     }
 
+    async getEventsByCategory(category: String, page: number = 1): Promise<Event[]> {
+        const skip = (page - 1) * 4;
+        const events = await this.eventModel.find({ category }).skip(skip).limit(4);
+        return events;
+    }
+
     async deleteEvent(id: String):Promise<String> {        
         const event = await this.eventModel.findById(id);
         if (!event) {
@@ -93,4 +99,5 @@ export class EventService {
         await this.eventModel.findByIdAndDelete(id);
         return 'Event deleted successfully';
     }
+
 }

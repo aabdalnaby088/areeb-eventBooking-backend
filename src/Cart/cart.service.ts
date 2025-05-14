@@ -94,4 +94,13 @@ async removeItemFromCart(userId: string, eventId: string): Promise<Cart> {
 }
 
 
+async deleteCart(userId: string){
+  const userObjectId = new Types.ObjectId(userId);
+
+  const cart = await this.cartModel.findOneAndDelete({ userId: userObjectId });
+  if (!cart) throw new NotFoundException('Cart not found');
+
+}
+
+
 }
