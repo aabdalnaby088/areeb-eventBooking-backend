@@ -1,9 +1,31 @@
-import { IsString, MinLength } from "class-validator";
+import { IsOptional, IsString, IsDateString, IsNumberString, MinLength, IsEnum } from "class-validator";
+import { EventCategory } from "src/utils/constants";
 
+export class editEventDto {
+  @IsOptional()
+  @IsString()
+  @MinLength(3)
+  name?: string;
 
-export class editEventDto{
+  @IsOptional()
+  @IsString()
+  @MinLength(10)
+  description?: string;
 
-    @IsString()
-    @MinLength(3)
-    name: String
+  @IsOptional()
+  @IsDateString()
+  date?: string;
+
+  @IsOptional()
+  @IsString()
+  @MinLength(3)
+  venue?: string;
+
+  @IsOptional()
+  @IsNumberString()
+  price?: string;
+
+  @IsOptional()
+  @IsEnum(EventCategory)
+  category?: string;
 }
