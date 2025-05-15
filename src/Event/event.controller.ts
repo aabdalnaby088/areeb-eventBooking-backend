@@ -53,6 +53,7 @@ async createEvent(
       @Param('id') id: String,
       @Body() eventDto: editEventDto,
       @UploadedFile() file?: Express.Multer.File) {
+        
         return await this.eventService.EditEvent(eventDto, id, file);
     }
 

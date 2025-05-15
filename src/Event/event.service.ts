@@ -44,6 +44,7 @@ export class EventService {
     }
     
     async EditEvent(editDto: editEventDto, id: String, File?: Express.Multer.File): Promise<Event> {
+      
         const event = await this.eventModel.findById(id);
         if (!event) {
             throw new NotFoundException('Event not found');
